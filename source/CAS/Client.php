@@ -3415,8 +3415,7 @@ class CAS_Client
         // 		</cas:authenticationSuccess>
         // 	</cas:serviceResponse>
         //
-        if (!count($extra_attributes)
-            && $success_elements->item(0)->getElementsByTagName("attribute")->length != 0
+        if ($success_elements->item(0)->getElementsByTagName("attribute")->length != 0
         ) {
             $attr_nodes = $success_elements->item(0)
                 ->getElementsByTagName("attribute");
